@@ -17,6 +17,6 @@ app.use(express.json());
 app.use('/api/auth', authRoutes);
 app.use('/api/chat', chatRoutes); // Register chat routes
 
-app.listen(3001, () => {
+app.listen(3001||process.env.PORT, () => {
   console.log('Server is running on port 3001');
 });
